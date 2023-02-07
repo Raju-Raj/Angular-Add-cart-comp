@@ -1,0 +1,38 @@
+<!-- <h2>Number of Books List</h2>
+<button  (click)="books = !books">
+   <ng-container *ngIf="books">Hide Books</ng-container>
+   <ng-container *ngIf="!books">Show Books</ng-container>
+</button>
+<br/><br/>
+
+<table border *ngIf="books">
+    <tr>
+        <th>Book</th>
+        <th>Book Name</th>
+        <th>Author Name</th>
+        <th>Price</th>
+    </tr>
+    <tr *ngFor="let book of noBooks">
+        <td>
+            <img src={{book.image}} width="50px" alt="{{book.name}}"/>
+        </td>
+        <td>{{book.name | titlecase}}</td>
+        <td>{{book.author | titlecase}}</td>
+        <td>{{book.price | currency : 'INR'}}</td>
+    </tr>
+
+    <tr *ngFor="let book of noBooks">
+        <td>
+            <img [src]="book.image" width="50px" [alt]="book.name"/>
+        </td>
+        <td>{{book.name | titlecase}}</td>
+        <td>{{book.author | titlecase}}</td>
+        <td>{{book.price | currency : 'INR'}}</td>
+    </tr>
+</table> -->
+
+<div class="books" >
+    <div class="card" *ngFor="let book of noBooks">
+       <app-book [book]="book"></app-book>
+    </div>
+</div>
